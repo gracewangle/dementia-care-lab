@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>치매케어연구소 | 치매 이후에도 가족과 함께 보통의 삶을</title>
+<meta name="description" content="치매케어연구소는 치매가 생긴 뒤 당사자와 가족이 겪는 일상의 어려움을 살펴보고, 가족과 함께 보통의 삶을 이어갈 수 있도록 학습지, 의사표현 카드, 서비스 등을 만듭니다.">
+<style>
+:root{
+  --bg:#f6f5f1;
+  --white:#fff;
+  --ink:#17202a;
+  --navy:#17324a;
+  --blue:#315d7a;
+  --sky:#dfe9ef;
+  --warm:#ede7dd;
+  --soft:#efefeb;
+  --muted:#69747c;
+  --line:#d9dcd8;
+  --accent:#b36b3c;
+  --max:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",Arial,sans-serif;
+  letter-spacing:-.025em;line-height:1.7;word-break:keep-all;
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+.section{padding:108px 0}
+.label{font-size:12px;letter-spacing:.12em;font-weight:850;color:var(--blue);text-transform:uppercase}
+h1,h2,h3,p{margin-top:0}
+h1{
+  font-size:clamp(46px,6vw,82px);line-height:1.08;letter-spacing:-.065em;
+  font-weight:760;margin:18px 0 30px;max-width:920px;
+}
+h2{
+  font-size:clamp(33px,4vw,54px);line-height:1.2;letter-spacing:-.05em;
+  font-weight:740;margin:16px 0 24px;
+}
+h3{font-size:24px;line-height:1.38;letter-spacing:-.04em;margin-bottom:12px}
+.lead{font-size:20px;line-height:1.85;color:#4e5961}
+.body{font-size:16px;color:#5e6970}
+.small{font-size:13px;color:var(--muted)}
+strong{font-weight:800}
+
+header{
+  position:sticky;top:0;z-index:100;background:rgba(246,245,241,.94);
+  backdrop-filter:blur(14px);border-bottom:1px solid rgba(217,220,216,.9)
+}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand strong{font-size:18px;letter-spacing:-.04em}
+.brand span{font-size:10px;letter-spacing:.13em;color:#7b858b;font-weight:800}
+.navlinks{display:flex;align-items:center;gap:27px;font-size:14px;font-weight:750;color:#535d63}
+.navlinks a:hover{color:var(--navy)}
+.navlinks .outline{border:1px solid #aeb6ba;border-radius:999px;padding:9px 15px;color:var(--navy)}
+.mobilelink{display:none;font-size:13px;font-weight:800}
+
+.hero{padding:76px 0 88px}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:stretch}
+.hero-copy{padding:46px 0 28px}
+.hero-copy .lead{max-width:720px;margin-bottom:34px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{
+  border:0;border-radius:3px;padding:14px 20px;display:inline-flex;align-items:center;gap:12px;
+  font-size:14px;font-weight:850;cursor:pointer;transition:.18s ease
+}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--navy);color:#fff}
+.btn.secondary{background:transparent;border:1px solid #b9c0c3;color:var(--navy)}
+.hero-foot{
+  display:flex;gap:28px;flex-wrap:wrap;margin-top:34px;padding-top:22px;border-top:1px solid var(--line);
+  font-size:12px;font-weight:800;color:#758087
+}
+.hero-panel{
+  background:var(--navy);min-height:610px;color:#fff;padding:44px;display:flex;flex-direction:column;position:relative;overflow:hidden
+}
+.hero-panel:before{
+  content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(255,255,255,.13);border-radius:50%;
+  right:-150px;top:-100px
+}
+.hero-panel:after{
+  content:"";position:absolute;width:230px;height:230px;border:1px solid rgba(255,255,255,.1);border-radius:50%;
+  left:-100px;bottom:-60px
+}
+.hero-panel .tiny{font-size:11px;letter-spacing:.16em;color:#aebfc8;font-weight:850}
+.hero-panel .big{
+  margin:auto 0;font-size:clamp(31px,3.3vw,46px);line-height:1.42;letter-spacing:-.045em;font-weight:680;
+  position:relative;z-index:2
+}
+.hero-panel .big em{font-style:normal;color:#c8dce7}
+.hero-panel .bottom{display:grid;grid-template-columns:1fr 1fr;gap:16px;position:relative;z-index:2}
+.hero-panel .mini{border-top:1px solid rgba(255,255,255,.22);padding-top:16px;font-size:12px;color:#b9c8cf}
+.hero-panel .mini strong{display:block;color:#fff;font-size:14px;margin-bottom:4px}
+
+.purpose{background:#fff}
+.purpose-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:84px}
+.sticky{position:sticky;top:110px;height:max-content}
+.purpose .statement{
+  font-size:clamp(30px,3.6vw,48px);line-height:1.36;letter-spacing:-.055em;font-weight:730;margin:18px 0 0
+}
+.purpose-list{border-top:1px solid var(--line)}
+.purpose-item{display:grid;grid-template-columns:90px 1fr;gap:24px;padding:34px 0;border-bottom:1px solid var(--line)}
+.purpose-item .n{font-size:12px;color:#8e989d;font-weight:850}
+.purpose-item h3{margin:0 0 8px}
+.purpose-item p{margin:0;color:#5c676e;font-size:16px}
+
+.research-flow{background:#eceeea}
+.section-head{max-width:830px;margin-bottom:52px}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid var(--line)}
+.flow-item{min-height:290px;padding:30px;border-right:1px solid var(--line);display:flex;flex-direction:column}
+.flow-item:last-child{border-right:0}
+.flow-item .num{font-size:11px;color:var(--accent);font-weight:900;letter-spacing:.12em}
+.flow-item .word{font-size:35px;font-weight:760;letter-spacing:-.05em;margin:44px 0 14px;color:var(--navy)}
+.flow-item p{font-size:14px;color:#667078;margin:auto 0 0}
+
+.products{background:#f8f7f3}
+.product{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #bec5c8;min-height:540px}
+.product:last-child{border-bottom:1px solid #bec5c8}
+.product-copy{padding:56px 56px 56px 0}
+.product.no2 .product-copy{order:2;padding:56px 0 56px 56px}
+.product .meta{font-size:11px;letter-spacing:.14em;font-weight:850;color:#7a858b}
+.product h3{font-size:clamp(31px,3.3vw,46px);margin:20px 0 22px;line-height:1.25}
+.product-copy p{font-size:17px;color:#5b666d;max-width:570px}
+.product-points{margin:27px 0 31px;padding:0;list-style:none}
+.product-points li{padding:10px 0;border-top:1px solid var(--line);font-size:14px;font-weight:750;color:#3f4a50}
+.product-points li:last-child{border-bottom:1px solid var(--line)}
+.product-art{background:#e5e9e6;display:grid;place-items:center;padding:50px;position:relative;overflow:hidden}
+.product.no2 .product-art{order:1;background:#e9e5dd}
+.book{
+  width:285px;height:370px;background:#fdfcf8;border:1px solid #cdd2d0;
+  box-shadow:22px 25px 0 rgba(23,50,74,.08),0 28px 50px rgba(23,40,50,.13);padding:33px;
+}
+.book .brandline{font-size:10px;letter-spacing:.14em;font-weight:900;color:var(--blue)}
+.book .title{font-size:33px;font-weight:760;line-height:1.28;margin:50px 0 26px}
+.book .subline{font-size:14px;color:#6b7478}
+.book .stripe{margin-top:44px;height:5px;background:var(--navy);width:56px}
+.deck{width:370px;height:330px;position:relative}
+.c{
+  width:190px;height:245px;background:#fff;border:1px solid #cfd3d0;position:absolute;padding:22px;
+  box-shadow:0 23px 36px rgba(30,43,49,.11)
+}
+.c:nth-child(1){left:5px;top:50px;transform:rotate(-7deg);background:#edf2ef}
+.c:nth-child(2){right:10px;top:54px;transform:rotate(8deg);background:#f2ece4}
+.c:nth-child(3){left:90px;top:12px;z-index:3}
+.c .pic{height:118px;background:#e6ebea;margin-bottom:22px;display:grid;place-items:center;font-size:42px;font-weight:300;color:var(--navy)}
+.c strong{font-size:18px;display:block}
+.c small{font-size:11px;color:#7e888d}
+
+.memory-source{background:var(--navy);color:#fff}
+.memory-source .label{color:#a8c2d2}
+.memory-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:76px}
+.memory-source h2{color:#fff}
+.memory-source .lead{color:#cdd9df}
+.source-list{border-top:1px solid rgba(255,255,255,.18)}
+.source-item{display:grid;grid-template-columns:70px 1fr;padding:25px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.source-item span{font-size:11px;color:#91aab8;font-weight:900}
+.source-item strong{font-size:18px}
+.source-item p{margin:5px 0 0;color:#b8c8d0;font-size:14px}
+
+.preview{background:#e7ecec}
+.preview-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:66px;align-items:start}
+.preview-copy{position:sticky;top:110px}
+.viewer{background:white;border:1px solid #cfd5d4;box-shadow:0 28px 60px rgba(29,43,49,.11)}
+.viewer-bar{height:56px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 22px;font-size:11px;font-weight:850;color:#768087;letter-spacing:.04em}
+.page{padding:42px;min-height:660px}
+.page .category{font-size:11px;font-weight:900;letter-spacing:.12em;color:var(--blue)}
+.page h3{font-size:37px;margin:10px 0 24px}
+.photo{height:230px;background:linear-gradient(145deg,#c9b38d,#829a91);position:relative;margin-bottom:26px;overflow:hidden}
+.photo:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 0 55%,rgba(23,50,74,.18) 56% 100%)}
+.photo:after{content:"시장 풍경";position:absolute;left:22px;top:20px;background:#fff;padding:7px 10px;font-size:11px;font-weight:900;letter-spacing:.04em}
+.q{font-size:22px;line-height:1.55;font-weight:820;margin-bottom:18px}
+.answers{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.answer{padding:13px 14px;border:1px solid var(--line);background:#fafaf7;font-size:14px}
+.note{margin-top:24px;border-top:1px solid var(--line);padding-top:18px;font-size:13px;font-weight:750;color:var(--blue)}
+.controls{border-top:1px solid var(--line);padding:15px 22px;display:flex;justify-content:space-between}
+.ctrl{border:0;background:transparent;color:var(--navy);font-weight:850;cursor:pointer;padding:9px 0}
+.ctrl.next{background:var(--navy);color:white;padding:9px 14px}
+.ctrl[disabled]{opacity:.28;cursor:default}
+
+.family{background:#fff}
+.family-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px}
+.family-list{border-top:1px solid var(--line)}
+.family-row{padding:25px 0;border-bottom:1px solid var(--line)}
+.family-row strong{display:block;font-size:18px;margin-bottom:6px}
+.family-row p{margin:0;color:#657078;font-size:15px}
+
+.final{background:var(--warm);padding:94px 0}
+.final-box{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center;border-top:1px solid #cdc4b7;border-bottom:1px solid #cdc4b7;padding:48px 0}
+.final h2{margin-bottom:12px}
+.final-actions{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}
+
+footer{background:#121b22;color:#d9e0e4;padding:56px 0 68px}
+.foot{display:grid;grid-template-columns:1.1fr .9fr;gap:60px}
+.foot strong{display:block;color:white;font-size:18px;margin-bottom:12px}
+.foot p{font-size:13px;color:#9daab1;line-height:1.9}
+.footlinks{display:flex;gap:18px;justify-content:flex-end;flex-wrap:wrap;font-size:13px;color:#b8c2c7}
+
+@media(max-width:960px){
+  .navlinks{display:none}.mobilelink{display:block}
+  .hero-grid,.purpose-grid,.memory-grid,.preview-grid,.family-grid,.final-box{grid-template-columns:1fr}
+  .sticky,.preview-copy{position:static}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow-item{border-bottom:1px solid var(--line)}
+  .product{grid-template-columns:1fr}
+  .product-copy,.product.no2 .product-copy{order:1;padding:42px 0}
+  .product-art,.product.no2 .product-art{order:2;min-height:420px}
+  .foot{grid-template-columns:1fr}.footlinks{justify-content:flex-start}
+  .final-actions{justify-content:flex-start}
+}
+@media(max-width:580px){
+  .wrap{width:min(var(--max),calc(100% - 28px))}
+  .section{padding:76px 0}.hero{padding:34px 0 72px}h1{font-size:44px}
+  .hero-panel{min-height:470px;padding:26px}.hero-panel .bottom{grid-template-columns:1fr}
+  .purpose-item{grid-template-columns:52px 1fr}.flow{grid-template-columns:1fr}.flow-item{border-right:0}
+  .product-copy,.product.no2 .product-copy{padding:34px 0}.product-art{padding:32px;min-height:350px!important}
+  .book{transform:scale(.82)}.deck{transform:scale(.82)}
+  .source-item{grid-template-columns:45px 1fr}.page{padding:27px 20px;min-height:650px}
+  .answers{grid-template-columns:1fr}.page h3{font-size:31px}
+  .actions .btn,.final-actions .btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <strong>치매케어연구소</strong>
+      <span>DEMENTIA CARE LAB</span>
+    </a>
+    <nav class="navlinks">
+      <a href="#purpose">연구소 소개</a>
+      <a href="#work">우리가 하는 일</a>
+      <a href="#products">제품</a>
+      <a href="#preview">학습지 맛보기</a>
+      <a href="#family">가족과 함께 쓰는 방법</a>
+      <a class="outline" href="#contact">문의</a>
+    </nav>
+    <a class="mobilelink" href="#preview">맛보기 →</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="label">Dementia Care Lab</div>
+      <h1>치매 이후에도,<br>가족과 함께 보통의 삶을.</h1>
+      <p class="lead">
+        치매케어연구소는 치매가 생긴 뒤
+        당사자와 가족이 일상에서 겪는 어려움을 살펴보고,
+        서로 더 잘 이해하며 함께 살아갈 수 있도록
+        필요한 학습지, 카드, 서비스 등을 만듭니다.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#purpose">치매케어연구소 소개 →</a>
+        <a class="btn secondary" href="#preview">학습지 맛보기</a>
+      </div>
+      <div class="hero-foot">
+        <span>당사자가 자신의 생각을 표현할 수 있게</span>
+        <span>가족이 덜 헤매고 더 잘 이해할 수 있게</span>
+        <span>첫 제품 2026년 12월 판매</span>
+      </div>
+    </div>
+
+    <aside class="hero-panel">
+      <div class="tiny">WHAT WE WANT</div>
+      <div class="big">
+        치매가 생겨도<br>
+        <em>내가 좋아하는 것을 고르고,<br>
+        가족과 이야기하고,<br>
+        익숙한 하루를 살아가는 것.</em>
+      </div>
+      <div class="bottom">
+        <div class="mini"><strong>당사자에게</strong>내가 원하는 것을 계속 표현할 수 있게</div>
+        <div class="mini"><strong>가족에게</strong>무엇을 원하는지 조금 더 쉽게 이해할 수 있게</div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section id="purpose" class="section purpose">
+  <div class="wrap purpose-grid">
+    <div class="sticky">
+      <div class="label">Why We Exist</div>
+      <div class="statement">
+        치매가 생겼다고<br>
+        <span style="color:var(--blue)">그 사람의 일상까지</span><br>
+        사라지는 건 아니니까.
+      </div>
+    </div>
+
+    <div class="purpose-list">
+      <div class="purpose-item">
+        <div class="n">01</div>
+        <div>
+          <h3>치매가 생기면 기억만 달라지는 게 아닙니다.</h3>
+          <p>말이 잘 나오지 않거나, 익숙한 일도 헷갈리거나, 몸과 기분이 예전과 다르게 느껴질 수 있습니다.</p>
+        </div>
+      </div>
+      <div class="purpose-item">
+        <div class="n">02</div>
+        <div>
+          <h3>가족도 어떻게 도와야 할지 어려울 때가 많습니다.</h3>
+          <p>왜 불편한지, 무엇을 원하는지 알기 어려워 서로 답답해지는 순간이 생깁니다.</p>
+        </div>
+      </div>
+      <div class="purpose-item">
+        <div class="n">03</div>
+        <div>
+          <h3>그래서 우리는 생활 속 작은 문제부터 봅니다.</h3>
+          <p>말하기 어려운 순간, 기억이 잘 나지 않는 순간, 가족과 대화가 막히는 순간처럼 실제 생활에서 필요한 도움을 찾습니다.</p>
+        </div>
+      </div>
+      <div class="purpose-item">
+        <div class="n">04</div>
+        <div>
+          <h3>목표는 가족과 함께 계속 잘 살아가는 것입니다.</h3>
+          <p>진단 전과 이후의 삶이 완전히 끊기지 않도록, 당사자와 가족이 함께 사용할 수 있는 방법을 만듭니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="section research-flow">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="label">What We Do</div>
+      <h2>당사자와 가족이 겪는 불편을 찾고,<br>쉽게 쓸 수 있는 방법을 만듭니다.</h2>
+      <p class="lead">
+        거창한 기술보다 지금 집에서 바로 쓸 수 있는 것부터 시작합니다.
+        종이 한 장, 카드 몇 장, 질문 하나라도 실제 생활에 도움이 되도록 만듭니다.
+      </p>
+    </div>
+
+    <div class="flow">
+      <div class="flow-item">
+        <div class="num">01</div>
+        <div class="word">듣기</div>
+        <h3>어떤 순간이 힘든지</h3>
+        <p>당사자와 가족이 생활에서 실제로 겪는 어려움을 살펴봅니다.</p>
+      </div>
+      <div class="flow-item">
+        <div class="num">02</div>
+        <div class="word">이해</div>
+        <h3>왜 어려운지</h3>
+        <p>당사자의 입장에서 무엇이 헷갈리고 무엇을 표현하기 어려운지 생각합니다.</p>
+      </div>
+      <div class="flow-item">
+        <div class="num">03</div>
+        <div class="word">만들기</div>
+        <h3>쉽게 쓸 수 있게</h3>
+        <p>학습지, 카드, 그림, 질문처럼 익숙한 형태로 해결책을 만듭니다.</p>
+      </div>
+      <div class="flow-item">
+        <div class="num">04</div>
+        <div class="word">고치기</div>
+        <h3>실제로 써보고</h3>
+        <p>당사자와 가족이 사용하면서 불편한 점을 확인하고 계속 개선합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="section products">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="label">What We Make</div>
+      <h2>지금 우리가 만들고 있는 것</h2>
+    </div>
+
+    <article class="product">
+      <div class="product-copy">
+        <div class="meta">PRODUCT 01</div>
+        <h3>추억을 떠올리고 이야기하는<br>인지 학습지</h3>
+        <p>
+          기존 학습지처럼 정답만 맞히는 방식보다,
+          당사자에게 익숙한 옛날의 장소, 음식, 생활, 물건에서 시작합니다.
+        </p>
+        <p>
+          예전 시장 이야기, 학교 다니던 길, 명절 음식처럼
+          <strong>내가 살아온 기억을 떠올리고 이야기한 뒤,
+          간단한 읽기·생각하기·기억하기 활동으로 이어집니다.</strong>
+        </p>
+        <ul class="product-points">
+          <li>어린이 문제집처럼 보이지 않는 성인용 디자인</li>
+          <li>“맞혔나요?”보다 “무엇이 떠오르나요?”에서 시작</li>
+          <li>시장·음식·동네·교통·일처럼 익숙한 주제</li>
+          <li>혼자 또는 가족과 함께 사용할 수 있는 구성</li>
+        </ul>
+        <div class="actions">
+          <a class="btn primary" href="#preview">학습지 맛보기</a>
+          <button class="btn secondary" data-buy="workbook">구매 페이지</button>
+        </div>
+      </div>
+      <div class="product-art">
+        <div class="book">
+          <div class="brandline">DEMENTIA CARE LAB</div>
+          <div class="title">오늘,<br>그때 이야기를<br>꺼내봅니다.</div>
+          <div class="subline">추억을 떠올리고 이야기하는 인지 학습지</div>
+          <div class="stripe"></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="product no2">
+      <div class="product-copy">
+        <div class="meta">PRODUCT 02</div>
+        <h3>내가 원하는 것을 보여주는<br>의사표현 카드</h3>
+        <p>
+          말이 잘 나오지 않는 순간에도
+          “물 주세요”, “아파요”, “쉬고 싶어요”, “싫어요”, “그만할래요”처럼
+          필요한 말을 직접 고를 수 있도록 만든 카드입니다.
+        </p>
+        <p>
+          가족이 “왜 그러시지?”라고 계속 추측하기보다,
+          <strong>당사자가 무엇을 원하는지 먼저 확인할 수 있도록</strong> 돕습니다.
+        </p>
+        <ul class="product-points">
+          <li>물·식사·화장실·아픔·휴식·도움 요청</li>
+          <li>좋아요·싫어요·예·아니요·그만할래요</li>
+          <li>가족·집·병원·좋아하는 음식 등 개인 맞춤 카드</li>
+          <li>가정과 돌봄 현장에서 쉽게 꺼내 쓸 수 있는 구성</li>
+        </ul>
+        <div class="actions">
+          <a class="btn primary" href="#contact">제품 문의</a>
+          <button class="btn secondary" data-buy="cards">구매 페이지</button>
+        </div>
+      </div>
+      <div class="product-art">
+        <div class="deck">
+          <div class="c"><div class="pic">○</div><strong>쉬고 싶어요</strong><small>REST</small></div>
+          <div class="c"><div class="pic">＋</div><strong>아파요</strong><small>PAIN</small></div>
+          <div class="c"><div class="pic">✓</div><strong>좋아요</strong><small>CHOICE</small></div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section memory-source">
+  <div class="wrap memory-grid">
+    <div>
+      <div class="label">How We Make Content</div>
+      <h2>우리가 상상한 ‘옛날’이 아니라,<br>그 시대를 살아온 사람들의 이야기에서 만듭니다.</h2>
+      <p class="lead">
+        같은 세대를 살아온 사람들의 실제 기억과 경험을 모아
+        많은 분들이 자연스럽게 떠올릴 수 있는 소재를 찾습니다.
+      </p>
+    </div>
+    <div class="source-list">
+      <div class="source-item">
+        <span>01</span>
+        <div><strong>그 시절 이야기를 듣습니다.</strong><p>시장, 학교, 음식, 일, 명절, 버스, 동네 이야기 등을 모읍니다.</p></div>
+      </div>
+      <div class="source-item">
+        <span>02</span>
+        <div><strong>여러 사람이 함께 기억하는 소재를 찾습니다.</strong><p>또래가 보면 바로 떠올릴 만한 물건, 사진, 장소, 말을 골라냅니다.</p></div>
+      </div>
+      <div class="source-item">
+        <span>03</span>
+        <div><strong>부담스러운 기억은 억지로 묻지 않습니다.</strong><p>사람마다 살아온 삶이 다르기 때문에 한 가지 경험을 모두에게 강요하지 않습니다.</p></div>
+      </div>
+      <div class="source-item">
+        <span>04</span>
+        <div><strong>학습지와 이야기거리로 다시 만듭니다.</strong><p>“맞혀보세요”가 아니라 자연스럽게 기억과 이야기가 나오도록 질문을 만듭니다.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="preview" class="section preview">
+  <div class="wrap preview-grid">
+    <div class="preview-copy">
+      <div class="label">Workbook Preview</div>
+      <h2>학습지 맛보기</h2>
+      <p class="lead">
+        실제로 어떤 방식인지 직접 한 장씩 넘겨보세요.
+        옛날 기억을 떠올리는 것에서 시작해 생각하고,
+        이야기하고, 오늘 생활과 연결합니다.
+      </p>
+      <p class="small">※ 현재는 홈페이지용 시연 샘플입니다. 실제 제품 PDF로 교체 가능합니다.</p>
+    </div>
+
+    <div class="viewer">
+      <div class="viewer-bar">
+        <span>DEMO · 시장에 가는 날</span>
+        <span id="counter">1 / 4</span>
+      </div>
+      <div id="page" class="page"></div>
+      <div class="controls">
+        <button id="prev" class="ctrl">← 이전</button>
+        <button id="next" class="ctrl next">다음 →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="family" class="section family">
+  <div class="wrap family-grid">
+    <div>
+      <div class="label">For Families</div>
+      <h2>가족이 함께 쓰기 어렵지 않도록.</h2>
+      <p class="body">
+        제품을 사는 것보다 중요한 것은
+        당사자를 재촉하지 않고, 답을 대신 말하지 않고,
+        그 사람이 표현할 시간을 기다리는 것입니다.
+      </p>
+    </div>
+    <div class="family-list">
+      <div class="family-row">
+        <strong>“기억 안 나?”보다 “이건 어떤 게 떠올라?”</strong>
+        <p>시험 보듯 묻기보다 편하게 이야기할 수 있는 질문을 사용합니다.</p>
+      </div>
+      <div class="family-row">
+        <strong>대답이 늦어도 조금 기다리기</strong>
+        <p>말이 바로 나오지 않아도 재촉하지 않고 표현할 시간을 줍니다.</p>
+      </div>
+      <div class="family-row">
+        <strong>말 대신 가리키는 것도 대답입니다.</strong>
+        <p>카드를 고르거나 손으로 가리키는 것도 당사자의 분명한 표현으로 봅니다.</p>
+      </div>
+      <div class="family-row">
+        <strong>가족이 맞히는 사람이 되지 않기</strong>
+        <p>무엇을 원하는지 추측하기보다 당사자가 직접 표현할 수 있는 방법을 먼저 보여줍니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="final">
+  <div class="wrap final-box">
+    <div>
+      <div class="label">Launching December 2026</div>
+      <h2>2026년 12월,<br>첫 제품을 선보입니다.</h2>
+      <p class="body">
+        판매가 시작되면 이 홈페이지의 구매 버튼에서
+        실제 판매 페이지로 바로 이동할 수 있도록 연결합니다.
+      </p>
+    </div>
+    <div class="final-actions">
+      <a class="btn primary" href="#preview">학습지 맛보기</a>
+      <a class="btn secondary" href="mailto:hello@example.com">문의하기</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <strong>치매케어연구소</strong>
+      <p>
+        운영사 로컬비(Local Bee)<br>
+        치매가 생긴 뒤에도 당사자와 가족이 함께 보통의 삶을 이어갈 수 있도록
+        생활 속 어려움을 살펴보고 필요한 콘텐츠·제품·서비스를 만듭니다.<br><br>
+        ※ 본 사이트의 콘텐츠와 제품은 의료행위 또는 치료 효과를 보장하지 않습니다.
+      </p>
+    </div>
+    <div class="footlinks">
+      <a href="#purpose">연구소 소개</a>
+      <a href="#work">우리가 하는 일</a>
+      <a href="#products">제품</a>
+      <a href="#preview">학습지 맛보기</a>
+      <a href="#family">가족과 함께 쓰는 방법</a>
+      <a href="#contact">문의</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const PURCHASE_URLS={workbook:"",cards:""};
+document.querySelectorAll("[data-buy]").forEach(btn=>{
+  btn.onclick=()=>{
+    const url=PURCHASE_URLS[btn.dataset.buy];
+    if(url) window.open(url,"_blank","noopener,noreferrer");
+    else{
+      const old=btn.textContent;
+      btn.textContent="2026년 12월 판매 예정";
+      btn.disabled=true;
+      setTimeout(()=>{btn.textContent=old;btn.disabled=false},1700);
+    }
+  }
+});
+
+const pages=[
+{
+ category:"01 · 추억 떠올리기",
+ title:"시장에 가는 날",
+ photo:true,
+ q:"예전에 자주 갔던 장보기 장소가 있었나요?",
+ answers:["시장","동네 가게·슈퍼","마트","다른 곳 / 기억이 안 나요"],
+ note:"정답은 없습니다. 떠오르는 장소나 사람, 냄새, 소리가 있다면 편하게 이야기해보세요."
+},
+{
+ category:"02 · 생각해보기",
+ title:"오늘 살 물건",
+ photo:false,
+ q:"오늘 살 물건은 두부, 사과, 달걀입니다. 잠시 읽은 뒤 기억나는 것을 골라보세요.",
+ answers:["두부","사과","달걀","목록을 다시 볼래요"],
+ note:"어렵다면 다시 봐도 괜찮습니다. 맞히는 것보다 천천히 생각해보는 과정이 중요합니다."
+},
+{
+ category:"03 · 이야기하기",
+ title:"그때의 장보기",
+ photo:false,
+ q:"시장이나 가게에 가면 자주 샀던 것이 있었나요?",
+ answers:["먹거리","생활용품","가족이 좋아하던 것","기억이 안 나요 / 건너뛸게요"],
+ note:"본인의 경험에는 맞고 틀림이 없습니다. 떠오르는 이야기가 있다면 자유롭게 말해보세요."
+},
+{
+ category:"04 · 오늘과 연결하기",
+ title:"이번에 필요한 것",
+ photo:false,
+ q:"오늘 또는 다음 장보기 때 필요한 것이 있나요?",
+ answers:["먹을 것","생활용품","외출 준비물","지금은 없어요"],
+ note:"옛날 기억에서 끝내지 않고 지금 내가 필요한 것과 하고 싶은 것으로 이어갑니다."
+}
+];
+
+let i=0;
+const page=document.getElementById("page"),counter=document.getElementById("counter");
+const prev=document.getElementById("prev"),next=document.getElementById("next");
+function render(){
+ const p=pages[i];
+ page.innerHTML=`
+   <div class="category">${p.category}</div>
+   <h3>${p.title}</h3>
+   ${p.photo?'<div class="photo"></div>':''}
+   <div class="q">${p.q}</div>
+   <div class="answers">${p.answers.map(x=>`<div class="answer">${x}</div>`).join("")}</div>
+   <div class="note">${p.note}</div>`;
+ counter.textContent=`${i+1} / ${pages.length}`;
+ prev.disabled=i===0;
+ next.textContent=i===pages.length-1?"처음으로 ↺":"다음 →";
+}
+prev.onclick=()=>{if(i>0){i--;render()}};
+next.onclick=()=>{i=(i+1)%pages.length;render()};
+render();
+</script>
+</body>
+</html>
